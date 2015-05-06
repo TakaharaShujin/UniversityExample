@@ -1,0 +1,18 @@
+<h3 class="nmt">{{ singleStaff.name }}</h3>
+<div class="well" style="min-height: 500px;">
+	<div class="media">
+		<div class="pull-left">
+			<img class="media-object" ng-src="{{ singleStaff.face }}" alt="{{ singleStaff.name }}">
+		</div>
+		<div class="media-body">
+			<h5 class="media-heading"><i class="glyphicon glyphicon-info-sign"></i> <b>Bilgi</b></h5>
+			<p>{{ singleStaff.info }}</p>
+			<h5 class="media-heading"><i class="glyphicon glyphicon-briefcase"></i> <b>Ofis</b></h5>
+			<p>{{ singleStaff.office }}</p>
+			<h5 class="media-heading"><i class="glyphicon glyphicon-phone-alt"></i> <b>Telefon</b></h5>
+			<p>{{ singleStaff.phone }}</p>
+			<h5 class="media-heading"><i class="glyphicon glyphicon-envelope"></i> <b>E-Mail</b></h5>
+			<p>{{ singleStaff.email }}</p>
+		</div>
+	</div>
+</div>

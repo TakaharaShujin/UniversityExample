@@ -1,0 +1,20 @@
+{
+	"name": "bilkent",
+	"version": "0.0.1",
+	"authors": [
+		"Üsame Fethullah AVCI <takaharashujin@gmail.com>"
+	],
+	"dependencies": {
+		"jquery": "~2.1.4",
+		"bootstrap": "~3.3.4",
+		"fontawesome": "~4.3.0"
+	},
+	"description": "Bilkent Üniversitesi Redesign",
+	"main": "index.html",
+	"keywords": [
+		"bilkent",
+		"redesign"
+	],
+	"license": "MIT",
+	"homepage": "http://lab.takaharashuj.in/bilkent"
+}

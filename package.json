@@ -1,0 +1,31 @@
+{
+  "name": "bilkent",
+  "version": "1.0.0",
+  "description": "Bilkent Üniversitesi Redesign",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "keywords": [
+    "bilkent",
+    "redesign"
+  ],
+  "author": "Üsame Fethullah AVCI <takaharashujin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "coffee-script": "^1.9.2",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-coffee": "^2.3.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-connect": "^2.2.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-open": "^0.3.2",
+    "gulp-sass": "^1.3.3",
+    "gulp-uglify": "^1.2.0",
+    "gulp-watch": "^4.2.4"
+  }
+}

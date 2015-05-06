@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bilkent Üniversitesi</title>
+	<link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/libs/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/app.min.css">
+	<script type="text/javascript" src="assets/libs/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
+	<script type="text/javascript" src="assets/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="assets/js/app.min.js"></script>
+</head>
+<body ng-app="bilkent">
+		<header>
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" ui-sref="index"><img src="assets/img/logow.png" alt="Anasayfa" height="50"></a>
+				</div>
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav">
+						<li><a ui-sref="index">Anasayfa</a></li>
+						<li><a ui-sref="academic-staff-list">Fakülte ve Bölümler</a></li>
+					</ul>
+				</div>
+			</nav>
+			<section id="top-slider" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="item active">
+						<img src="assets/img/slider-1.jpg" alt="">
+						<div class="carousel-caption">
+							<h3>“Lady with a Lapdog, with Jokes and A Happy Ending” oyunu Oda Tiyatrosu’nda sahneleniyor.</h3>
+							<p>Tarihler: 7, 14, 21 Mayıs Saat: 18:00</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="assets/img/slider-2.jpg" alt="">
+						<div class="carousel-caption">
+							<h3>Bilkent Üniversitesi yüzme havuzu geçtiğimiz yarı yıl kullanıma açıldı.</h3>
+							<p>Yarı olimpik havuzun derinliği 2.10 metre, uzunluğu 25 metre ve genişliği 6 kulvardır. Yaklaşık 2000m2‘lik bir alanı kaplayan havuz çevre dostu enerji verimli bir binadır.</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="assets/img/slider-3.jpg" alt="">
+						<div class="carousel-caption">
+							<h3>Bahar Şenliği’ne az kaldı!</h3>
+							<p>Geleneksel olarak düzenlenen ‘Spring Fest’ 7, 8 ve 9 Mayıs’ta Merkez Kampüs Çim alanda gerçekleşecek. Bahar Şenliği konserlerinde bu yıl Mor ve Ötesi ile Sıla var. Tüm Bilkentlileri şenliğe bekliyoruz.</p>
+						</div>
+					</div>
+				</div>
+				<div class="tools">
+					<ol class="carousel-indicators">
+						<li data-target="#top-slider" data-slide-to="0" class="active"></li>
+						<li data-target="#top-slider" data-slide-to="1"></li>
+						<li data-target="#top-slider" data-slide-to="2"></li>
+					</ol>
+					<div class="arrows">
+						<a data-target="#top-slider" class="left" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+						<a data-target="#top-slider" class="right" data-slide="next"><i class="fa fa-angle-right"></i></a>
+					</div>
+				</div>
+			</section>
+		</header>
+		<section id="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8" ui-view>
+					</div>
+					<div class="col-lg-4" ng-controller="SearchController">
+						<h3 class="nmt">Akademik Personeller</h3>
+						<form class="academy-search" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Personel ara.." ng-model="keyword.name">
+							</div>
+						</form>
+						<div class="list-group">
+							<a ui-sref="academic-staff({ slug : staff.slug })" class="list-group-item" ng-repeat="staff in stafflist | filter:keyword:strict">{{ staff.name }}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<ul class="list-group">
+							<li class="list-group-item"><a href="http://www.bilkenterbil.org/">Bilkent Erbil</a></li>
+							<li class="list-group-item"><a href="http://www.obel.bilkent.edu.tr/">Bilkent Erzurum</a></li>
+							<li class="list-group-item"><a href="http://www.radyobilkent.com">Radyo Bilkent (96.6 FM)</a></li>
+							<li class="list-group-item"><a href="http://blisankara.org">BLIS</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3">
+						<ul class="list-group">
+							<li class="list-group-item"><a href="http://mho.bilkent.edu.tr/ilkokul/menu/1/okulumuz.html">Müzik Hazırlık Okulu</a></li>
+							<li class="list-group-item"><a href="http://www.obi.bilkent.edu.tr/">Özel Bilkent Okulları</a></li>
+							<li class="list-group-item"><a href="http://bilnews.bilkent.edu.tr/">Bilkent News</a></li>
+							<li class="list-group-item"><a href="http://w3.bilkent.edu.tr/www/dergi-bilkent/">Dergi Bilkent</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3">
+						<ul class="list-group">
+							<li class="list-group-item"><a href="http://video.bilkent.edu.tr/">Video Arşivi</a></li>
+							<li class="list-group-item"><a href="http://www.bilkent.edu.tr/bilkent-tr/admin-unit/personel/index.html">İnsan Kaynakları</a></li>
+							<li class="list-group-item"><a href="http://w3.bilkent.edu.tr/www/akademik-is/">Akademik İş İlanları</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3">
+						<a class="logo" ui-sref="index"><img src="assets/img/logow.png" alt="Anasayfa" width="150"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="text-center copyright">Bilkent &copy; 2015</div>
+</body>
+</html>
