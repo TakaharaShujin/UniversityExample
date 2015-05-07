@@ -1,4 +1,4 @@
-# Üniversite Örnek Çalışma
+﻿# Üniversite Örnek Çalışma
 
 * Uzun zamandır başlamak istediğim coffeescript ve sass'a teknolojilerine giriş uygulamam umarım devamı gelir ^.^ *
 
@@ -23,13 +23,17 @@ Repoyu indirin
 git clone https://github.com/TakaharaShujin/UniversityExample.git
 ```
 
+Bower Dependency'lerini yükleyin
+```shell
+bower install
+```
 Gulp Dependency'lerini yükleyin
 ```shell
 npm install
 ```
-Bower Dependency'lerini yükleyin
+Gulp'ı çalıştırmak için global kurulum yapın (Gulp bilgisayarınızda kurulu ise bu adımı atlayın..)
 ```shell
-npm install
+npm install -g gulp
 ```
 Gulp'ı çalıştırın
 ```shell
